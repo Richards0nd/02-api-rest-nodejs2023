@@ -1,0 +1,43 @@
+{
+	"name": "new2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts",
+		"lint": "eslint src --ext .ts --fix",
+		"build": "tsup src",
+		"test": "vitest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.14.6",
+		"@types/supertest": "^2.0.12",
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
+		"@typescript-eslint/parser": "^5.54.0",
+		"eslint": "^8.35.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-config-standard-with-typescript": "^34.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"prettier": "^2.8.4",
+		"supertest": "^6.3.3",
+		"tsup": "^6.6.3",
+		"tsx": "^3.12.3",
+		"typescript": "^4.9.5",
+		"vitest": "^0.29.2"
+	},
+	"dependencies": {
+		"@fastify/cookie": "^8.3.0",
+		"dotenv": "^16.0.3",
+		"fastify": "^4.14.0",
+		"knex": "^2.4.2",
+		"sqlite3": "^5.1.4",
+		"zod": "^3.21.4"
+	}
+}
