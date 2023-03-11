@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === 'test') {
 
 const envSchema = z.object({
 	NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
-	SERVER_PORT: z.number().default(3000),
+	SERVER_PORT: z.coerce.number().default(3000),
 	DATABASE_URL: z.string(),
-	DB_CLIENT: z.string().default('sqlite3')
+	DB_CLIENT: z.enum(['pg', 'mysql', 'sqlite']).default('sqlite')
 })
 
 const _env = envSchema.safeParse(process.env)
