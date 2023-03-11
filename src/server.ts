@@ -3,7 +3,7 @@ import { env } from './env'
 
 app
 	.listen({
-		port: env.SERVER_PORT
+		port: env.PORT
 	})
 	.then(() => {
 		console.log('Server listening on port 3000')
